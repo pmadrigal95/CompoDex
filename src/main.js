@@ -7,7 +7,7 @@ import { Quasar } from 'quasar'
 import '@quasar/extras/material-icons/material-icons.css'
 
 // Import Quasar css
-import '@/css/style.css';
+import '@/styles/style.css';
 
 import 'quasar/src/css/index.sass'
 
