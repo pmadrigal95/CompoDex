@@ -1,9 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import Home from '@/pages/Home.vue';
+import MainLayout from '@/layouts/MainLayout.vue'
+import Index from '@/pages/Index.vue';
 
 const routes = [
-  { path: '/', component: Home },
+  {
+    path: '/',
+    component: MainLayout,
+    children: [
+      { path: '', component: Index },
+      { path: 'history', component: () => import('@/pages/History.vue') },
+      { path: 'components', component: () => import('@/pages/Components.vue') },
+      { path: 'about', component: () => import('@/pages/About.vue') }
+    ]
+  },
+  { path: '/:pathMatch(.*)*', redirect: '/' }
 ];
 
 const router = createRouter({

@@ -1,13 +1,7 @@
 <template>
-  <q-layout view="hHh lpR fFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-toolbar-title>CompoDex</q-toolbar-title>
-      </q-toolbar>
-    </q-header>
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-  </q-layout>
+  <router-view />
 </template>
+
+<script setup>
+// App root component
+</script>
